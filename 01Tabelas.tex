@@ -1,0 +1,73 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{amsmath,array,amssymb} %Pacotes para poder usar o pmatrix
+
+\DeclareMathOperator{\sen}{sen}
+
+%===CBEÇALHO===========================================
+\title{\textbf{TABELAS}}
+\author{Autor: Roberto Farias}
+\date{Data: 21/Maio/2023}
+%======================================================
+
+\begin{document}
+\maketitle % Faz com que o cabeçalho apareça no PDF
+
+\textbf{As tabelas abaixo foram criadas usando o ambiente tabular}
+\vspace{1cm}
+
+\noindent
+\textbf{Tabela 01: Tabela simples}\\
+\begin{tabular}{|l|c|r|} \hline
+	Célula1 & Célula2 & Célula3\\ \hline
+	Célula4 & Célula5 & Célula6\\ \hline
+\end{tabular}
+
+\vspace{1cm}
+
+\noindent
+\textbf{Tabela 02: mesclando colunas}\\
+\begin{tabular}{|c|c|c|c|} \hline
+	\multicolumn{4}{|c|}{Meses Do Ano}\\ \hline
+	Janeiro & Fevereiro & Março & Abril \\ \hline
+	Maio & Junho & Julho & Agosto \\ \hline
+	Setembro & Outubro & Novembro & Dezembro \\ \hline
+\end{tabular}
+
+\vspace{1cm}
+
+\noindent
+\textbf{Tabela 03: Mesclando Segunda e Terceira Colunas}\\
+\begin{tabular}{|c|cc|}\hline
+Números: & \multicolumn{2}{c|}{Meses Do Ano Abreviações}\\ \hline
+1 & Janeiro & Jan \\ \cline{2-3}
+2 & Fevereiro & Fev \\ \cline{2-3}
+3 & Março & Mar \\ \cline{2-3}
+4 & Abril & Abr \\ \cline{2-3}
+5 & Maio & Mai \\ \cline{2-3}
+6 & Junho & Jun \\ \hline
+\end{tabular}
+
+\vspace{1cm}
+\textbf{As tabelas abaixo foram criadas usando o ambiente table}
+\begin{table}[h]
+\centering
+\caption{Os Maiores Países Do Mundo Em Extensão}
+\vspace{0.5cm}
+	\begin{tabular}{c|cc}
+		Posição & Países & Extenção Territorial $Km^2$\\ \hline
+		1 & Rússia & 17.089.246\\
+		2 & Canadá & 9.984.670\\
+		3 & China & 9.596.961\\
+		4 & Estados Unidos & 9.371.174\\
+		5 & Brasil & 8.515.767
+	\end{tabular}
+\end{table}
+
+\end{document}
