@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt, oneside]{book}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage[nottoc]{tocbibind} %Pra colocar sa referências bibliográficas
+% Os 3 pacotes abaixo são para o roda pé
+\usepackage{ftnxtra}
+\usepackage{fnpos}
+\usepackage{lipsum}
+
+\usepackage{makeidx} % Para índice remissivo
+
+\linespread{1.5} %Espaçamento em todo o texto
+\makeindex
+
+\begin{document}
+
+\tableofcontents
+\listoffigures %Sumário para mostrar imagens
+\listoftables %Sumário para mostrar tabela
+\newpage
+
+\chapter{Introdução}
+
+%INSERINDO TABELA
+\begin{table}[h]
+\centering
+\caption{Os Maiores Países Do Mundo Em Extensão \cite{IBGE}\footnote{Retirado Do Site Do IBGE}}
+\vspace{0.5cm}
+	\begin{tabular}{c|cc}
+		Posição & Países & Extenção Territorial $Km^2$\\ \hline
+		1 & Rússia & 17.089.246\\
+		2 & Canadá & 9.984.670\\
+		3 & China & 9.596.961\\
+		4 & Estados Unidos & 9.371.174\\
+		5 & Brasil & 8.515.767
+	\end{tabular}
+\end{table}
+% O comando abaixo força a nota de roda pé a aparecer
+\footnotetext{Retirado Do Site Do IBGE}
+
+\section{Assunto 1}
+\section{Assunto 2}
+
+\chapter{Desenvolvimento}
+\section{Assunto 3}
+
+	\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.75]{C:/Users/rober/Pictures/Lampada.png}
+	\caption{Imagem De Lâmpada\cite{FARIAS}\footnote{Imagem Retirad Da Internet}}\label{FigLampada}
+	\end{figure}
+\footnotetext{Imagem Retirad Da Internet}	
+
+\vspace{2cm}
+
+Possuo \index{Gradução} graduação \index{Graduação!Licenciatura} em Licenciatura em Ciências da Natureza e tecnologia em \index{Graduação!Análise e desenvolvimento de Sistemas} Análise e desenvolvimento de Sistemas.
+	
+\section{Assunto 4}
+
+\chapter{Conclusão}
+\section{Assunto 5}
+
+	\begin{figure}[h]
+		\centering
+		\subfigure[Planeta Terra\label{FigTerra}]{\includegraphics[scale=1]{C:/Users/rober/Pictures/Terra.png}}
+		\subfigure[Planeta Marte\label{FigMarte}]{\includegraphics[scale=1]{C:/Users/rober/Pictures/Marte.png}}
+		\subfigure[Planeta Saturno\label{FigSaturno}]{\includegraphics[scale=1]{C:/Users/rober/Pictures/Saturno.png}}
+		\caption{Alguns Planetas Do Sistema Solar}\label{FigSistema}
+		
+	\end{figure}
+
+\section{Assunto 6}
+
+Aprenda, persista, e estude a cada dia \cite{FARIAS}
+
+
+\begin{thebibliography}{2}
+
+	\bibitem{FARIAS} FARIAS, J.R; Curso De Latex. Universidade Federal De Sergipe, 2023 
+	\bibitem{IBGE} IBGE, Instituito Brasileiro De Pesquisa E Estatística, 2023
+
+\end{thebibliography}
+
+\printindex
+\end{document}
